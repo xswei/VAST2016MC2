@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vast Challenge MC2</title>
+	<link rel="stylesheet" href=".\css\style.css">
+	<script src=".\dataset\employee.js"></script>
+	<script src=".\dataset\floor1-MC2.js"></script>
+	<script src=".\dataset\floor2-MC2.js"></script>
+	<script src=".\dataset\floor3-MC2.js"></script>
+	<script src=".\dataset\f1z8a-MC2.js"></script>
+	<script src=".\dataset\f2z2-MC2.js"></script>
+	<script src=".\dataset\f2z4-MC2.js"></script>
+	<script src=".\dataset\f3z1-MC2.js"></script> 
+	<script src=".\dataset\general-MC2.js"></script>
+	<script src=".\dataset\prox-fixed.js"></script> 
+	<script src=".\dataset\prox_zone.js"></script> 
+	<script src=".\libs\d3.v4.js"></script>
+	<script src=".\libs\jquery-2.1.4.js"></script>
+	<script src=".\script\index.js"></script>
+	<script src=".\script\track.js"></script>
+	<script src=".\script\floor1.js"></script>
+	<script src=".\script\floor2.js"></script>
+	<script src=".\script\floor3.js"></script>
+	<script src=".\script\haz.js"></script>
+	<script src=".\script\general.js"></script>
+	<script src=".\script\moveTrack.js"></script>
+	<script src=".\script\realTime.js"></script>
+	<script src=".\script\department.js"></script>
+	<script src=".\script\abnormal.js"></script>
+</head>
+<body>
+	
+
+	<div class="main">
+		<div class="left">
+			<div id="div_track">
+				<svg id="svg_track">
+					<defs>
+						<clipPath id="clipPath_track">
+							<rect x="0" y="0" fill="none" width="0"></rect>
+						</clipPath>
+					</defs>
+				</svg>
+			</div>
+			<div id="div_activity">
+				<svg id="svg_activity"></svg>
+			</div>
+		</div>
+		<div class="right">
+			
+			<div id="div_floor3">
+				<div class="menu" id="menu_floor3" onclick="showFloor3Menu()">-</div>
+				<div class="rightTitle">Floor3 Sensors</div>
+				<svg id="svg_floor3">
+					<defs>
+						<clipPath id="clipPath_floor3">
+							<rect x="0" y="0" fill="none" width="0"></rect>
+						</clipPath>
+					</defs>
+				</svg>
+			</div>
+			<div id="div_floor2">
+				<div class="menu" id="menu_floor2" onclick="showFloor2Menu()">-</div>
+				<div class="rightTitle">Floor2 Sensors</div>
+				<svg id="svg_floor2">
+					<defs>
+						<clipPath id="clipPath_floor2">
+							<rect x="0" y="0" fill="none" width="0"></rect>
+						</clipPath>
+					</defs>
+				</svg>
+			</div>
+			<div id="div_floor1">
+				<div class="menu" id="menu_floor1" onclick="showFloor1Menu()">-</div>
+				<div class="rightTitle">Floor1 Sensors</div>
+				<svg id="svg_floor1">
+					<defs>
+						<clipPath id="clipPath_floor1">
+							<rect x="0" y="0" fill="none" width="0"></rect>
+						</clipPath>
+					</defs>
+				</svg>
+			</div>
+			<div id="div_general">
+				<div class="menu" id="menu_general" onclick="showGeneralMenu()">-</div>
+				<div class="rightTitle">General Sensors</div>
+				<!-- <canvas id="canvas_general"></canvas> -->
+				<svg id="svg_general">
+					<defs>
+						<clipPath id="clipPath_general">
+							<rect x="0" y="0" fill="none" width="0"></rect>
+						</clipPath>
+					</defs>
+				</svg>
+			</div>
+			<div id="div_haz">
+				<div class="menu" id="menu_haz" onclick="showHazMenu()">-</div>
+				<div class="rightTitle">Hazium Sensors</div>
+				<svg id="svg_haz">
+					<defs>
+						<clipPath id="clipPath_haz">
+							<rect x="0" y="0" fill="none" width="0"></rect>
+						</clipPath>
+					</defs>
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div id="left_menu_floor1" class="menu_list">
+		<table></table>
+	</div>
+	<div id="left_menu_floor2" class="menu_list">
+		<table></table>
+	</div>
+	<div id="left_menu_floor3" class="menu_list">
+		<table></table>
+	</div>
+	<div id="left_menu_general" class="menu_list">
+		<table></table>
+	</div>
+	<div id="left_menu_haz" class="menu_list">
+		<table></table>
+	</div>
+	<div id="departmentTip"></div>
+</body>
+</html>
